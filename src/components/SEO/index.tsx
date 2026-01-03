@@ -63,10 +63,7 @@ export default function SEO(props) {
           <meta property="og:image:alt" content={title || 'MetaMask Tutorial'} />
         </>
       ) : (
-        <meta
-          property="og:image"
-          content="https://docs.metamask.io/img/metamaskog.jpg"
-        />
+        <meta property="og:image" content="https://docs.metamask.io/img/metamaskog.jpg" />
       )}
 
       {/* Twitter Meta Tags */}
@@ -74,7 +71,11 @@ export default function SEO(props) {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@MetaMask" />
       <meta name="twitter:creator" content="@MetaMask" />
-      {title ? <meta name="twitter:title" content={title} /> : <meta name="twitter:title" content="Documentation | MetaMask" />}
+      {title ? (
+        <meta name="twitter:title" content={title} />
+      ) : (
+        <meta name="twitter:title" content="Documentation | MetaMask" />
+      )}
       {description ? (
         <meta name="twitter:description" content={description} />
       ) : (
@@ -86,10 +87,7 @@ export default function SEO(props) {
       {image ? (
         <meta name="twitter:image" content={image} />
       ) : (
-        <meta
-          name="twitter:image"
-          content="https://docs.metamask.io/img/metamaskog.jpg"
-        />
+        <meta name="twitter:image" content="https://docs.metamask.io/img/metamaskog.jpg" />
       )}
 
       {/* Google / Search Engine Tags */}
@@ -109,10 +107,7 @@ export default function SEO(props) {
       {image ? (
         <meta itemProp="image" content={image} />
       ) : (
-        <meta
-          itemProp="image"
-          content="https://docs.metamask.io/img/metamaskog.jpg"
-        />
+        <meta itemProp="image" content="https://docs.metamask.io/img/metamaskog.jpg" />
       )}
 
       <meta name="author" content="MetaMask" />
